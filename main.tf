@@ -35,4 +35,6 @@ resource "google_compute_instance" "web" {
     }
   }  
 
+  allow-stopping_for_update = true
+
 }
