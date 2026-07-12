@@ -35,6 +35,6 @@ resource "google_compute_instance" "blog" {
     }
   }  
 
-  allow-stopping_for_update = true
+  allow_stopping_for_update = true
 
 }
