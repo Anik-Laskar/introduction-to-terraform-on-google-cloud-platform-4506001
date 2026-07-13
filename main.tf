@@ -11,7 +11,8 @@ module "netwrok" {
             subnet_ip             = var.network_ip_range
             subnet_region         = var.region
         }
-]
+      ]
+                            
 
 ingress_rules = 
 
