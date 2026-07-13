@@ -1,4 +1,4 @@
-module "netwrok" {
+module "app_netwrok" {
   source  = "terraform-google-modules/network/google"
   version = "18.1.2"
 
@@ -57,7 +57,7 @@ resource "google_compute_instance" "blog" {
     }
   }
   network_interface {
-   subnetwork = module.network.subnets_name[0]
+   subnetwork = module.app_network.subnets_names[0]
    access_config {
       # Leave empty for dynamic public IP
     }
