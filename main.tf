@@ -16,7 +16,7 @@ module "app_netwrok"{
 
 ingress_rules = 
 
-[
+[{
     name                    = "${var.network_name}-web"
     description             = "INbound web"
    
@@ -31,8 +31,9 @@ ingress_rules =
       ports    = ["80", "443"]
        }
     ]
+    }
 ]
-  
+
 
 
 
