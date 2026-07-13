@@ -14,9 +14,7 @@ module "netwrok" {
       ]
                             
 
-ingress_rules = 
-
-[
+ingress_rules = [
 
   {
     name                    = "${var.network_name}-web"
@@ -27,10 +25,10 @@ ingress_rules =
     target_tags             = ["${var.network_name}-web"]
 
 
-    allow =[ 
-      {
-      protocol = "tcp"
-      ports    = ["80", "443"]
+    allow = [ 
+       {
+         protocol = "tcp"
+         ports    = ["80", "443"]
        }
     ]
 }
@@ -59,7 +57,7 @@ resource "google_compute_instance" "blog" {
     }
   }
   network_interface {
-   subnetwork = module.network.subnet_name[0]
+   subnetwork = module.network.subnets_name[0]
    access_config {
       # Leave empty for dynamic public IP
     }
